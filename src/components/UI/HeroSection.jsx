@@ -67,20 +67,21 @@ export const HeroSection = () => {
 
   return (
     <div>
-      {/* Background Image Overlay - Responsive adjustments */}
-      <div
-        className="absolute top-0 md:top-[-10%] lg:top-[-20%] xl:top-[-30%] w-full h-screen md:h-auto md:aspect-[1] -z-10 bg-cover bg-center bg-no-repeat"
-        style={{
-          backgroundImage: `linear-gradient(150deg, rgba(11,29,38,0.9) 0%, rgba(11,29,38,0) 60%, rgba(11,29,38,0) 100%), 
-            linear-gradient(to bottom, rgba(11,29,38,0) 0%, rgba(11,29,38,0) 30%, rgba(11,29,38,0) 50%, rgba(11,29,38,1) 90%), 
-          url('/images/hero-image.png')`,
-        }}
-        aria-hidden="true"
-        role="img"
-      />
+    
+        <div
+          className="absolute top-0 md:top-[-10%] lg:top-[-20%] xl:top-[-30%] w-full h-screen md:h-auto md:aspect-[1] -z-10 bg-cover bg-center bg-no-repeat"
+          style={{
+            backgroundImage: `linear-gradient(150deg, rgba(11,29,38,0.9) 0%, rgba(11,29,38,0) 60%, rgba(11,29,38,0) 100%), 
+          linear-gradient(to bottom, rgba(11,29,38,0) 0%, rgba(11,29,38,0) 30%, rgba(11,29,38,0) 50%, rgba(11,29,38,1) 90%), 
+            url('/images/hero-image.webp')`,
+          }}
+          aria-hidden="true"
+          role="img"
+          loading="lazy"
+        />
 
-      <section>
-        {/* Header */}
+        <section>
+          {/* Header */}
         <div className="container mx-auto py-4 md:py-6 px-4">
           <header className="flex items-center justify-between">
             <h1 className="text-white font-bold uppercase font-chronicle text-2xl md:text-3xl">

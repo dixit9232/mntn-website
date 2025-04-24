@@ -80,6 +80,7 @@ const SectionBlock = ({
             src={image || "/placeholder.svg"}
             alt={`Section ${number}`}
             className="w-full"
+            loading="lazy"
           />
         </div>
 
