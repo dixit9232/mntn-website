@@ -1,9 +1,26 @@
+// eslint-disable-next-line no-unused-vars
+import { motion } from "framer-motion";
+
 export const Footer = () => {
+  const fadeIn = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.8, ease: "easeOut" },
+    },
+  };
+
   return (
-    <div className="content-container text-white py-12 px-6">
+    <motion.div
+      className="content-container text-white py-12 px-6"
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true }}
+    >
       <footer className="grid grid-cols-1 md:grid-cols-2 lg:flex lg:flex-row justify-between gap-12">
         {/* Blog Links */}
-        <div className="order-1 lg:order-none">
+        <motion.div variants={fadeIn} className="order-1 lg:order-none">
           <h3 className="text-accent font-gilroy font-bold mb-4 text-2xl">
             More on The Blog
           </h3>
@@ -34,10 +51,10 @@ export const Footer = () => {
               </a>
             </li>
           </ul>
-        </div>
+        </motion.div>
 
         {/* MNTN Links */}
-        <div className="order-2 lg:order-none">
+        <motion.div variants={fadeIn} className="order-2 lg:order-none">
           <h3 className="text-accent font-gilroy font-bold mb-4 text-2xl">
             More on MNTN
           </h3>
@@ -58,10 +75,13 @@ export const Footer = () => {
               </a>
             </li>
           </ul>
-        </div>
+        </motion.div>
 
         {/* Left Column (MNTN Brand & Info) */}
-        <div className="order-3 lg:order-first lg:w-2/5 w-full">
+        <motion.div
+          variants={fadeIn}
+          className="order-3 lg:order-first lg:w-2/5 w-full"
+        >
           <h1 className="text-white font-bold uppercase font-chronicle text-3xl">
             <a href="#" aria-label="Home">
               mntn
@@ -75,8 +95,8 @@ export const Footer = () => {
           <p className="text-lg text-gray-400 mt-6 font-gilroy font-medium">
             © 2023 MNTN, Inc. Terms & Privacy
           </p>
-        </div>
+        </motion.div>
       </footer>
-    </div>
+    </motion.div>
   );
 };
