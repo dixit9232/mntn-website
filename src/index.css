@@ -1,0 +1,117 @@
+@import "tailwindcss";
+
+/* Font declarations for Gilroy */
+@font-face {
+  font-family: "Gilroy";
+  src: url(/fonts/Gilroy-bold.ttf) format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Gilroy";
+  src: url(/fonts/Gilroy-extraBold.ttf) format("truetype");
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Gilroy";
+  src: url(/fonts/Gilroy-medium.ttf) format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+/* Font declarations for Chronicle */
+@font-face {
+  font-family: "Chronicle";
+  src: url(/fonts/Chronicle-bold.otf) format("opentype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Chronicle";
+  src: url(/fonts/Chronicle-semibold.otf) format("opentype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@theme {
+  --font-gilroy: "Gilroy", "Mona Sans";
+  --font-chronicle: "Chronicle", "Mona Sans";
+  --color-white: #ffffff;
+  --color-bgColor: #0b1d26;
+  --color-accent: #fbd784;
+}
+.container {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.content-container {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+@media (min-width: 640px) {
+  .container {
+    max-width: 640px;
+  }
+
+  .content-container {
+    max-width: calc(640px - 25%);
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+  .content-container {
+    max-width: calc(768px - 25%);
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    max-width: 1024px;
+  }
+  .content-container {
+    max-width: calc(1024px - 25%);
+  }
+}
+
+@media (min-width: 1280px) {
+  .container {
+    max-width: 1280px;
+  }
+  .content-container {
+    max-width: calc(1280px - 25%);
+  }
+}
+
+@media (min-width: 1440px) {
+  .container {
+    max-width: 1440px;
+  }
+  .content-container {
+    max-width: calc(1440px - 25%);
+  }
+}
+
+@media (min-width: 1760px) {
+  .container {
+    max-width: 1760px;
+  }
+
+  .content-container {
+    max-width: calc(1760px - 25%);
+  }
+}
